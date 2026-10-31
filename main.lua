@@ -50,7 +50,16 @@ local function home()
 	return HOME
 end
 
+--- yazi 的配置目录（会正确响应 YAZI_CONFIG_HOME 环境变量）
 local function config_dir()
+	local ok, dir = pcall(function()
+		return tostring(rt.path.config_dir)
+	end)
+	if ok and dir and dir ~= "" then
+		return dir
+	end
+
+	-- 兜底：旧版本 yazi 没有 rt.path
 	if IS_WINDOWS then
 		return (os.getenv("APPDATA") or (home() .. "/AppData/Roaming")) .. "/yazi"
 	end

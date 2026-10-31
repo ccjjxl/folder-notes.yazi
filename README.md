@@ -98,7 +98,9 @@ archive.
 
 ## Notes file
 
-Default location: `~/.config/yazi/folder-notes.conf` (change it with the `file` option).
+Default location: `<yazi config dir>/folder-notes.conf`, i.e. `~/.config/yazi/folder-notes.conf`
+(change it with the `file` option). The default follows Yazi's config directory, so
+`YAZI_CONFIG_HOME` is respected.
 
 ```conf
 # Lines starting with # are comments, blank lines are ignored.

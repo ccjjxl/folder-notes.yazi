@@ -95,7 +95,8 @@ desc = "显示/隐藏文件夹备注"
 
 ## 备注文件
 
-默认位置：`~/.config/yazi/folder-notes.conf`（可以通过 `file` 选项修改）。
+默认位置：`<yazi 配置目录>/folder-notes.conf`，通常是 `~/.config/yazi/folder-notes.conf`
+（可以通过 `file` 选项修改）。默认路径跟随 Yazi 的配置目录，所以 `YAZI_CONFIG_HOME` 也是生效的。
 
 ```conf
 # 以 # 开头是注释，空行会被忽略
